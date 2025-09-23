@@ -14,10 +14,26 @@
       height: 100vh;
       margin: 0;
       text-align: center;
+      flex-direction: column;
     }
     .signal {
       max-width: 600px;
       line-height: 1.5;
+    }
+    .timestamp {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #e0e0e0;
+      animation: blink 1s steps(1) infinite;
+      margin-left: 5px;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
     }
   </style>
 </head>
@@ -25,9 +41,8 @@
   <div class="signal">
     <p>This isn’t just a site—it’s a signal.<br><br>
     If you’ve found it, you’re meant to be here.<br>
-    No ads. No noise. Just a quiet transmission.<br><br>
-    <em>More soon.</em>
-    </p>
+    No ads. No noise. Just a quiet transmission.<span class="cursor"></span></p>
+    <div class="timestamp">Last updated: September 22, 2025</div>
   </div>
 </body>
 </html>
